@@ -1,0 +1,38 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Results</h1>
+    {% if results %}
+    <table border="1">
+      <tr>
+        <th>Drug Name</th>
+        <th>Formula</th>
+        <th>M/Z Value</th>
+        <th>Concentration (µg/mL)</th>
+      </tr>
+      {% for result in results %}
+      <tr>
+        <td>{{ result['Drug Name'] }}</td>
+        <td>{{ result['Formula'] }}</td>
+        <td>{{ result['M/Z Value'] }}</td>
+        <td>{{ result['Concentration'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </br>
+  <a href="{{ url_for('download',filename=filename)}}"
+      >Report ⬇</a
+    >
+    {% else %}
+        <p>No drug found.</p>
+    {% endif %}
+    <br />
+    </div>
+  </body>
+</html>

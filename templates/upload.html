@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload mzML File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+   <div class="container">
+    <h1>Upload mzML File for Prediction</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" required />
+      <input type="submit" value="Upload and Predict" />
+    </form>
+   </div>
+  </body>
+</html>
