@@ -20,18 +20,18 @@ Before running the project, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-```bash
+```
 git clone https://github.com/yourusername/drug-detection-web-app.git
 cd drug-detection-web-app
 ```
 2. **Install the required Packages:**
 
-```bash
+```
 pip install -r requirements.txt
 ```
 3. **Set up the SQLite database:**
 
-```bash
+```
 python -c "from main import db; db.create_all()"
 ```
 4. **Place the trained model and formulas files in the data directory:**
@@ -44,7 +44,7 @@ python -c "from main import db; db.create_all()"
 python main.py
 ```
 2. **Open your web browser and navigate to:**
-``` arduino
+```
 http://127.0.0.1:5000/
 ```
 3. **Sign up or log in to access the file upload and prediction features.**
